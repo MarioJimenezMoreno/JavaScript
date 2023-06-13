@@ -1,7 +1,3 @@
-
-
-
-
 const id = (nombre, apellido1, apellido2) => {
 return nombre + " " + apellido1 + " " + apellido2;
 }

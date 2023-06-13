@@ -1,6 +1,6 @@
-var nombre = 'Mario'; /*  */
-let apellido = 'Jimenez'; /*  */
-const apellido2 = 'Moreno'; /*  */
+var nombre = 'Mario'; /* Variable cualquiera en Global Scope*/
+let apellido = 'Jimenez'; /* Variable cualquiera con Block Scope */
+const apellido2 = 'Moreno'; /* Constante, no puede cambiar de valor */
 
 const value = Symbol("Hola");
 const value2 = Symbol("Hola");
