@@ -1,7 +1,4 @@
 let array = ["🎴", "🎴", "🎴", "🎴", "🎴", "🎴", "🎴"];
 
-let nombre = "pepe";
+console.log(array.flatMap(i => i === "🎴" && i < array.length ? [i, "🃏"] : i));
 
-nombre = nombre[0].toUpperCase() + nombre.slice(1);
-
-console.log(nombre);

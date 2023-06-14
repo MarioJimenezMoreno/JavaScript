@@ -1,5 +1,3 @@
-const piña = (currentValue) => currentValue === "🍍";
+let array = ["🍕", "🍕", "🍕", "🍍", "🍕", "🍕", "🍕"];
 
-let array = ["🍕","🍕","🍕","🍍","🍕","🍕","🍕"];
-
-console.log(array.some(piña));
+console.log(array.includes("🍍"));
