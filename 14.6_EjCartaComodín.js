@@ -1,4 +1,4 @@
 let array = ["🎴", "🎴", "🎴", "🎴", "🎴", "🎴", "🎴"];
 
-console.log(array.flatMap(i => i === "🎴" && i < array.length ? [i, "🃏"] : i));
+console.log(array.flatMap((i, index) => i === "🎴" && index < array.length - 1 ? [i, "🃏"] : i));
 
