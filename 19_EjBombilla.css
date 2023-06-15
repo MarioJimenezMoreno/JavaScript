@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+#containerMain{
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#containerButton{
+    margin: 200px;
+    align-self: center;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+#containerSettings{
+    visibility: hidden;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color:white;
+}
+#bulb{
+    height: 600px;
+}
