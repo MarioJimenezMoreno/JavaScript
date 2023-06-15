@@ -16,3 +16,21 @@ console.log(pepe);
 
 console.log(nombre + " " + apellido + " " + apellido2); /* Old School */
 console.log(`${nombre} ${apellido} ${apellido2}`); /* Template Literals */
+
+/* Selección con JS */
+document.getElementsById("id").innerText = "Texto nuevo";
+document.getElementsByClassName("class").innerHtml = "Texto nuevo";
+document.getElementsByTagName("etiqueta").remove();
+document.getElementsByTagName("etiqueta").style.backgroundColor = 'blue';
+document.getElementsByTagName("etiqueta").style.cssText = "background-color: red; color: yellow;";
+document.querySelector();
+document.querySelectorAll();
+/* Selección JQuery */
+$('#id').html("Texto nuevo");
+$('.class').text("Texto nuevo");
+$('etiqueta').append("Texto nuevo");
+$('etiqueta').prepend("Texto nuevo");
+$('etiqueta').remove();
+$('.class:first').css('color', 'blue');
+$('.class:last').css({ 'background-color': 'red', 'color': 'yellow' });
+
