@@ -4,12 +4,23 @@
     padding:0px;
 }
 #chatBox{
-height: 250px;
-width: 300px;
 display:flex;
-flex-direction: column;
+margin-left: 55px;
+text-align: center;
 }
 .buttonContainer{
     display:flex;
-    width: 300px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.textContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.scoreContainer{
+    display: flex;
+    flex-direction: row;
+}
+.scoreText{
+    margin-right: 5px;
 }
