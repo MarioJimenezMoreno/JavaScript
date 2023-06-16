@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="17_EjPiedraPapelTijera.css" />
   </head>
   <body>
-    <div class="hudContainer">
-      <div class="buttonContainer">
+    <div id="menuContainer">
+      <h1>Choose a gamemode :&#41;</h1>
+      <button id="unlimited" class="gamemodeBtn">🔁😴Unlimited😴🔁</button>
+      <button id="bestOf5" class="gamemodeBtn">🏆😎Best of 5😎🏆</button>
+    </div>
+    <div id="gameContainer">
+      <button class="goMenuBtn" id="back">&lt;&lt;Menu</button>
+      <div id="buttonContainer">
         <button id="tijera" class="btn">✌</button>
         <button id="papel" class="btn">🖐</button>
         <button id="piedra" class="btn">✊</button>
       </div>
+      <div id="textContainer">
+        <div class="scoreContainer">
+          <h1 class="scoreText">Your Score:</h1>
+          <h1 id="myScore">0</h1>
+        </div>
+        <div id="chatBox"></div>
+        <div class="scoreContainer">
+          <h1 class="scoreText">Machine Score:</h1>
+          <h1 id="enemyScore">0</h1>
+        </div>
+      </div>
     </div>
-    <div class="textContainer">
-      <div class="scoreContainer">
-        <h1 class="scoreText">Your Score:</h1>
-        <h1 id="yourScore">0</h1>
-      </div>
-      <div id="chatBox"></div>
-      <div class="scoreContainer">
-        <h1 class="scoreText">Machine Score:</h1>
-        <h1 id="machineScore">0</h1>
-      </div>
+    <div id="endScreen">
+      <div id="result"></div>
+      <button class="goMenuBtn" id="playAgain">Play Again</button>
     </div>
     <script src="17_EjPiedraPapelTijera.js"></script>
   </body>
