@@ -1,0 +1,15 @@
+.btn{
+    height: 100px;
+    width: 100px;
+    padding:0px;
+}
+#chatBox{
+height: 250px;
+width: 300px;
+display:flex;
+flex-direction: column;
+}
+.buttonContainer{
+    display:flex;
+    width: 300px;
+}
