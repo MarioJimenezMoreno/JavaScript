@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+}
+.containerAdd, .containerRemove, #array, .containerSelect{
+    text-align: center;
+    font-size: 40px;
+}
+.containerAdd, .containerRemove, .containerSelect{
+    width: 50%;
+}
+.btn{
+    font-size: 25px;
+}
+#array{
+    position: absolute;
+    top: 30%;
+    width: 95%;
+    margin-inline: 2.5%;
+}
