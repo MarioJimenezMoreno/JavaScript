@@ -4,8 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="22_EjChuckNorris.css" />
   </head>
-  <body>
+  <body style="height: 100vh; width: 100vw">
+    <img
+      src="./Ej Chuck Norris/Chuck.jpg"
+      style="height: 100%; width: 100%; position: absolute"
+    />
+    <div
+      id="container"
+      class="nes-container with-title"
+      style="
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: antiquewhite;
+        text-align: center;
+        top: 25%;
+        width: fit-content;
+        margin-inline: auto;
+      "
+    >
+      <h2 class="nes-text">Broma de Chuck Norris</h2>
+      <p id="joke" class="nes-text">Press the Button for a joke!</p>
+      <button id="btn" class="nes-btn is-success">Siguiente</button>
+    </div>
     <script src="22_EjChuckNorris.js"></script>
   </body>
 </html>
