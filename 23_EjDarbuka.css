@@ -3,7 +3,7 @@ body{
     width: 100vw;
     margin: 0px;
 }
-img.btn{
+.btnsContainer img{
     width: 200px;
     height: 100px;
     margin-inline: 20px;
@@ -39,6 +39,6 @@ body>img{
     color: yellow;
     margin-left:100px;
 }
-.containerText > h3, .containerText > h1{
+.containerText  h3, .containerText  h1{
     margin: 0px;
 }
