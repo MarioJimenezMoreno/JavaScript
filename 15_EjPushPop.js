@@ -10,7 +10,9 @@ let arrayItems = itemsList.slice();
 
 btns.forEach((btn) => {
     btn.onclick = ((event) => {
+
         item = Math.floor(Math.random() * arrayItems.length);
+
 
         switch (event.target.id) {
 
@@ -24,6 +26,9 @@ btns.forEach((btn) => {
                 arrayItems.splice(item, 1);
                 break;
             case "Insert":
+                if (numTarget.value > array.length || numTarget.value == 0) {
+                    numTarget.value = array.length;
+                }
                 array.splice(numTarget.value - 1, 0, arrayItems[item]);
                 arrayItems.splice(item, 1);
                 break;
@@ -45,10 +50,14 @@ btns.forEach((btn) => {
                 }
                 break;
             case "Remove":
-                if (array.length >= 1) {
+                if (numTarget.value > array.length || numTarget.value == 0) {
+                    numTarget.value = array.length;
+                }
+                if (array.length > 0) {
                     arrayItems.push(array[numTarget.value - 1]);
                     array.splice(numTarget.value - 1, 1)
                 }
+
                 break;
 
         }
