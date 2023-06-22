@@ -59,7 +59,7 @@ opacity.onchange = () => {
             bulb.style.opacity = "40%";
             break;
         case 3:
-            bulb.style.opacity = "60%x";
+            bulb.style.opacity = "60%";
             break;
         case 4:
             bulb.style.opacity = "80%";
