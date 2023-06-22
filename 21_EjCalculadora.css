@@ -39,6 +39,7 @@ body {
   font-weight: 700;
   font-family: "Kablammo", cursive;
   font-family: "Lexend Deca", sans-serif;
+  user-select: none;
 }
 .b1 {
   background-color: hsl(222, 26%, 31%);
@@ -52,14 +53,15 @@ body {
   background-color: hsl(268, 75%, 9%);
   color: hsl(52, 100%, 62%);
 }
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin-left: 10px;
 }
-
+#opScreen {
+  margin-right: 5px;
+}
 #rangeContainer {
   width: 90px;
   display: flex;

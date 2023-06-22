@@ -18,7 +18,7 @@
     />
     <title>Calculator app | Mario</title>
   </head>
-  <body id="by">
+  <body>
     <main>
       <header>
         <span>calc</span>
@@ -34,27 +34,30 @@
           </div>
         </div>
       </header>
-      <div id="screen">1</div>
+
+      <span id="screen"
+        ><span id="opScreen"></span><span id="numScreen"></span
+      ></span>
       <div id="keyPad">
         <div id="keyButtons">
           <div class="wb b num">7</div>
           <div class="wb b num">8</div>
           <div class="wb b num">9</div>
-          <div class="gb b">DEL</div>
+          <div class="gb b del">DEL</div>
           <div class="wb b num">4</div>
           <div class="wb b num">5</div>
           <div class="wb b num">6</div>
-          <div class="wb b symbol">+</div>
+          <div class="wb b operator">+</div>
           <div class="wb b num">1</div>
           <div class="wb b num">2</div>
           <div class="wb b num">3</div>
-          <div class="wb b symbol">-</div>
-          <div class="wb b symbol">,</div>
+          <div class="wb b operator">-</div>
+          <div class="wb b coma">.</div>
           <div class="wb b num">0</div>
-          <div class="wb b symbol">/</div>
-          <div class="wb b symbol">x</div>
-          <div class="gb b double">RESET</div>
-          <div class="rb b symbol double">=</div>
+          <div class="wb b operator">/</div>
+          <div class="wb b operator">*</div>
+          <div class="gb b reset double">RESET</div>
+          <div class="rb b calc double">=</div>
         </div>
       </div>
     </main>
