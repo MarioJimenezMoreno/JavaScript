@@ -19,19 +19,17 @@ const numScreen = document.getElementById("numScreen");
 
 let number = 0;
 let operator = "";
-let coma = false;
 
 numBtns.forEach(btn => {
     btn.onclick = () => {
         if (numScreen.textContent.length == 0 && btn.textContent == "0") {
             numScreen.textContent = "0.";
-            coma = true;
         }
         else if (opScreen.textContent.length > 0 && btn.textContent == "0") {
             storeData();
             numScreen.textContent = "0.";
         }
-        else if (numScreen.textContent.length <= 15 && opScreen.textContent.length == 0) {
+        else if (numScreen.textContent.length <= 14 && opScreen.textContent.length == 0) {
             numScreen.textContent = numScreen.textContent + btn.textContent;
         }
         else if (numScreen.textContent.length > 0 && opScreen.textContent.length > 0) {
@@ -42,7 +40,7 @@ numBtns.forEach(btn => {
 });
 
 comaBtn.onclick = () => {
-    if (numScreen.textContent.length > 0 && numScreen.textContent.length < 15 && !containsComa(numScreen.textContent)) {
+    if (numScreen.textContent.length > 0 && numScreen.textContent.length < 14 && !containsComa(numScreen.textContent)) {
         numScreen.textContent = numScreen.textContent + ".";
     }
     else if (numScreen.textContent.length == 0) {
@@ -52,7 +50,6 @@ comaBtn.onclick = () => {
         storeData();
         numScreen.textContent = "0.";
     }
-    coma = true;
 }
 
 opBtns.forEach(btn => {
@@ -63,19 +60,19 @@ opBtns.forEach(btn => {
     }
 });
 
-/* ???????????????????????????????????????????????????????????????????????????????????????????????????? */
 calcBtn.onclick = () => {
     let result = calculo(parseFloat(number), parseFloat(numScreen.textContent), operator);
-    result > 9999999999999999 ? numScreen.textContent = 9999999999999999 : numScreen.textContent = result;
+
+    result.toString().length > 15 ? result = "999999999999999" : false;
+
+    numScreen.textContent = result;
 }
-/* ???????????????????????????????????????????????????????????????????????????????????????????????????? */
 
 delBtn.onclick = () => {
     numScreen.textContent = numScreen.textContent.slice(0, -1);
     if (numScreen.textContent.length == 0) {
         opScreen.textContent = "";
     }
-    coma = containsComa(numScreen.textContent);
 }
 
 resetBtn.onclick = () => {
@@ -83,7 +80,6 @@ resetBtn.onclick = () => {
     opScreen.textContent = "";
     number = "";
     operator = "";
-    coma = false;
 }
 
 /* Cálculos */
