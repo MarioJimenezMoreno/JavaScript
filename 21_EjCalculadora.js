@@ -27,7 +27,7 @@ numBtns.forEach(btn => {
             numScreen.textContent = "0.";
             coma = true;
         }
-        else if (btn.textContent == "0" && opScreen.textContent.length > 0) {
+        else if (opScreen.textContent.length > 0 && btn.textContent == "0") {
             storeData();
             numScreen.textContent = "0.";
         }
@@ -42,10 +42,10 @@ numBtns.forEach(btn => {
 });
 
 comaBtn.onclick = () => {
-    if (numScreen.textContent.length > 0 && numScreen.textContent.length < 15 && coma == false) {
+    if (numScreen.textContent.length > 0 && numScreen.textContent.length < 15 && !containsComa(numScreen.textContent)) {
         numScreen.textContent = numScreen.textContent + ".";
     }
-    else if (numScreen.textContent.length == 0 && coma == false) {
+    else if (numScreen.textContent.length == 0) {
         numScreen.textContent = "0.";
     }
     else if (opScreen.textContent.length > 0) {
@@ -57,7 +57,6 @@ comaBtn.onclick = () => {
 
 opBtns.forEach(btn => {
     btn.onclick = () => {
-        coma = isInteger(parseFloat(numScreen.textContent));
         if (numScreen.textContent.length > 0) {
             opScreen.textContent = btn.textContent;
         }
@@ -67,7 +66,6 @@ opBtns.forEach(btn => {
 /* ???????????????????????????????????????????????????????????????????????????????????????????????????? */
 calcBtn.onclick = () => {
     let result = calculo(parseFloat(number), parseFloat(numScreen.textContent), operator);
-    coma = isInteger(parseFloat(result)); // Error con los 0,X
     result > 9999999999999999 ? numScreen.textContent = 9999999999999999 : numScreen.textContent = result;
 }
 /* ???????????????????????????????????????????????????????????????????????????????????????????????????? */
@@ -77,7 +75,7 @@ delBtn.onclick = () => {
     if (numScreen.textContent.length == 0) {
         opScreen.textContent = "";
     }
-    coma = isInteger(parseFloat(numScreen.textContent));
+    coma = containsComa(numScreen.textContent);
 }
 
 resetBtn.onclick = () => {
@@ -112,8 +110,8 @@ function calculo(num1, num2, op) {
     }
 }
 
-function isInteger(num) {
-    return num % 1 != 0;
+function containsComa(num) {
+    return num.includes(".");
 }
 
 /* Themes */
